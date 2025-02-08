@@ -1,2 +1,2 @@
 # Personal-Portfolio-Website
- A portfolio built with HTML, CSS, and JavaScript.
+ A portfolio website built with HTML, CSS, and JavaScript.
