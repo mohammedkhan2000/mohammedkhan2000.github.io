@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portfolio" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/fa62c117c7.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+    <title>Mohammed Khan - Laravel</title>
+  </head>
+  <body class="light" id="top">
+    <header class="header center">
+      <h3>
+        <a href="https://mohammedkhan2000.github.io/" class="link">MK.</a>
+      </h3>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#projects">Projects</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#skills">Skills</a>
+          </li>
+          <li class="nav__list-item">
+            <a class="link link--nav" href="#contact">Contact</a>
+          </li>
+        </ul>
+
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+
+        <button
+          type="button"
+          aria-label="toggle navigation"
+          class="btn btn--icon nav__hamburger"
+        >
+          <i aria-hidden="true" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <!-- About -->
+      <div class="about center">
+        <h1><span class="about__name">My First Laravel Website</span></h1>
+        <p class="about__desc"></p>
+      </div>
+
+      <!-- Blog -->
+      <div class="">
+        <h2 class="section__title">A detailed breakdown</h2>
+        <p>
+            I’m at the start of my journey, creating a dev portfolio and 
+            documenting the process of learning the technologies that will carry me through this process.
+        </p>
+        <p>-</p> 
+        <p>
+            I’ve started with Laravel, after searching for popular development frameworks and deciding I 
+            firstly need a website to place my thoughts on. A place where everything that I want to keep 
+            track of in this racing mind of mine, I’ll try to keep on-hand as something I can look back on 
+            and understand what decisions I’ve made and why. My brother works in Software Engineering as the 
+            CTO for a web-development company that primarily use Laravel so I wanted to see what all the hype 
+            was about.
+        </p>
+        <p>-</p> 
+        <p>
+            Getting  started, looking at the documentation for Laravel 
+            (https://laravel.com/docs/11.x/installation#creating-a-laravel-project) I decided to use Herd to 
+            ensure that I have all prerequisites installed. After ensuring I’ve got Composer, PHP, and Node 
+            installed through Herd, it was time to create my first project. 
+        </p>
+        <img src="Images/LaravelSetup.png" alt="An image of the laravel setup">
+        <p>
+            I’ve started with the basics, setting up a new Laravel project and getting it running on my local 
+            machine. I’ve been following the documentation on the Laravel website and have been able to get 
+            the project up and running. I’ve also been able to create a new controller and view, and have 
+            started to understand the basics of routing in Laravel.
+        </p>
+        <p>-</p>
+        <p>
+            Using SQLite as the database my application will be using, my example project is created. 
+            There was an error I ran into stating “git was not found in your PATH, skipping source download”. 
+            After a quick search, this StackOverflow question resolved my issue: 
+        </p>
+        <p>
+            <a href="https://stackoverflow.com/questions/74253281/git-was-not-found-in-your-path-skipping-source-download" class="link">https://stackoverflow.com/questions/74253281/git-was-not-found-in-your-path-skipping-source-download</a>
+        </p>
+        <p>-</p>
+        <p>
+            Editing the php.ini file and looking for the ;extension=zip to change it with extension=zip. 
+            Upon removing the semi-colon (;), my problem was solved.
+        </p>
+        <p>-</p>
+        <p>
+            My first project was made and it was now time to start tinkering with it. 
+        </p>
+        <p>-</p>
+        <p>
+            To get my HTTP server up and running I need to run the “php artisan serve” command within CMD/Powershell 
+            after navigating to “Mohammed Khan\Herd\Example-Project”. Easier done within the Visual Studio integrated 
+            terminal as the directory is already set as soon as you open it.
+        </p>
+        <img src="Images/httpserver.png" alt="An image of the http server turning on">
+        <p>
+            First, I wanted to draft a landing page for my development portfolio. Instead of creating an entire page 
+            from scratch, since there’s so many resources these days I managed to find a template for a personal 
+            portfolio page. It’s written in HTML & CSS so it needs to be refactored to work within the Laravel framework.
+        </p>
+        <p>-</p>
+        <p>
+            “Example-Project\resources\views\web” is where my index.blade.php files are stored for now. 
+            Creating two folders, one for the index/landing page and one for the blog pages. The page 
+            I’ve created features a navigation bar with a few hyperlinks to get around the website. 
+        </p>
+        <img src="Images/Navigation Bar.png" alt="An image of the navigation bar">
+      </div>
+
+      <!-- Contact -->
+      <section class="section contact center" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <a href="mailto:mohammed.khan2000@hotmail.com">
+          <span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a
+        href="https://github.com/mohammedkhan2000/mohammedkhan2000.github.io"
+        class="link footer__link"
+      >
+        Created By Mohammed Khan
+      </a>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
