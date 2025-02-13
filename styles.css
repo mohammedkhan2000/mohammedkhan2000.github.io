@@ -102,17 +102,19 @@ button {
 More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
  */
 
- .container {
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  width: 80%;
-  height: 80%;
+ .stars {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure it's behind other elements */
   pointer-events: none; /* Ensure it doesn't interfere with other elements */
   opacity: 0.2; /* Adjust opacity to make it less prominent */
 }
 
-.container::before {
+.stars::before {
   content: "";
   position: absolute;
   inset: -145%;
