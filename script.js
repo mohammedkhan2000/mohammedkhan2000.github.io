@@ -1,35 +1,32 @@
+document.addEventListener('DOMContentLoaded', () => {
+	const body = document.body;
+	const themeToggle = document.getElementById('theme-toggle');
+	const currentTheme = localStorage.getItem('theme') || 'dark';
+  
+	// Apply the current theme
+	body.classList.add(currentTheme);
+	themeToggle.checked = currentTheme === 'dark';
+  
+	// Toggle theme function
+	const toggleTheme = () => {
+	  if (themeToggle.checked) {
+		body.classList.remove('light');
+		body.classList.add('dark');
+		localStorage.setItem('theme', 'dark');
+	  } else {
+		body.classList.remove('dark');
+		body.classList.add('light');
+		localStorage.setItem('theme', 'light');
+	  }
+	};
+  
+	// Add event listener to the input
+	themeToggle.addEventListener('change', toggleTheme);
+  });
+
 const body = document.body
 
-const btnTheme = document.querySelector('.fa-moon')
 const btnHamburger = document.querySelector('.fa-bars')
-
-const addThemeClass = (bodyClass, btnClass) => {
-  body.classList.add(bodyClass)
-  btnTheme.classList.add(btnClass)
-}
-
-const getBodyTheme = localStorage.getItem('portfolio-theme')
-const getBtnTheme = localStorage.getItem('portfolio-btn-theme')
-
-addThemeClass(getBodyTheme, getBtnTheme)
-
-const isDark = () => body.classList.contains('dark')
-
-const setTheme = (bodyClass, btnClass) => {
-
-	body.classList.remove(localStorage.getItem('portfolio-theme'))
-	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
-
-  addThemeClass(bodyClass, btnClass)
-
-	localStorage.setItem('portfolio-theme', bodyClass)
-	localStorage.setItem('portfolio-btn-theme', btnClass)
-}
-
-const toggleTheme = () =>
-	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
-
-btnTheme.addEventListener('click', toggleTheme)
 
 const displayList = () => {
 	const navUl = document.querySelector('.nav__list')

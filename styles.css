@@ -7,7 +7,6 @@
   margin: 0;
   border: 0;
   outline: 0;
-  background-color: inherit;
   color: inherit;
   font-family: inherit;
   font-size: inherit;
@@ -26,7 +25,7 @@ body {
   background-color: var(--clr-bg);
 }
 
-.light {
+.dark {
   --clr-bg: #fcfcfc;
   --clr-bg-alt: #fff;
   --clr-fg: #555;
@@ -35,7 +34,7 @@ body {
   --shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.dark {
+.light {
   --clr-bg: #23283e;
   --clr-bg-alt: #2a2f4c;
   --clr-fg: #bdbddd;
@@ -98,6 +97,185 @@ button {
   }
 }
 
+/* From Uiverse.io by SelfMadeSystem */ 
+/*
+More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
+ */
+
+ .container {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  width: 80%;
+  height: 80%;
+  pointer-events: none; /* Ensure it doesn't interfere with other elements */
+  opacity: 0.2; /* Adjust opacity to make it less prominent */
+}
+
+.container::before {
+  content: "";
+  position: absolute;
+  inset: -145%;
+  rotate: -45deg;
+  background: rgba(0, 0, 0, 0.2);
+  background-image: radial-gradient(4px 100px at 0px 235px, rgb(99, 56, 255), #0000),
+    radial-gradient(4px 100px at 300px 235px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 117.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 252px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 252px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 126px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 150px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 150px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 75px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 253px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 253px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 126.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 204px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 204px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 102px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 134px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 134px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 67px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 179px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 179px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 89.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 299px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 299px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 149.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 215px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 215px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 107.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 281px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 281px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 140.5px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 158px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 158px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 79px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%),
+    radial-gradient(4px 100px at 0px 210px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(4px 100px at 300px 210px, rgba(128, 0, 128, 0.5), rgba(0, 0, 0, 0)),
+    radial-gradient(1.5px 1.5px at 150px 105px, rgba(128, 0, 128, 1) 100%, rgba(0, 0, 0, 0) 150%);
+  background-size:
+    300px 235px,
+    300px 235px,
+    300px 235px,
+    300px 252px,
+    300px 252px,
+    300px 252px,
+    300px 150px,
+    300px 150px,
+    300px 150px,
+    300px 253px,
+    300px 253px,
+    300px 253px,
+    300px 204px,
+    300px 204px,
+    300px 204px,
+    300px 134px,
+    300px 134px,
+    300px 134px,
+    300px 179px,
+    300px 179px,
+    300px 179px,
+    300px 299px,
+    300px 299px,
+    300px 299px,
+    300px 215px,
+    300px 215px,
+    300px 215px,
+    300px 281px,
+    300px 281px,
+    300px 281px,
+    300px 158px,
+    300px 158px,
+    300px 158px,
+    300px 210px,
+    300px 210px,
+    300px 210px;
+  animation: hi 150s linear infinite;
+}
+
+@keyframes hi {
+  0% {
+    background-position:
+      0px 220px,
+      3px 220px,
+      151.5px 337.5px,
+      25px 24px,
+      28px 24px,
+      176.5px 150px,
+      50px 16px,
+      53px 16px,
+      201.5px 91px,
+      75px 224px,
+      78px 224px,
+      226.5px 350.5px,
+      100px 19px,
+      103px 19px,
+      251.5px 121px,
+      125px 120px,
+      128px 120px,
+      276.5px 187px,
+      150px 31px,
+      153px 31px,
+      301.5px 120.5px,
+      175px 235px,
+      178px 235px,
+      326.5px 384.5px,
+      200px 121px,
+      203px 121px,
+      351.5px 228.5px,
+      225px 224px,
+      228px 224px,
+      376.5px 364.5px,
+      250px 26px,
+      253px 26px,
+      401.5px 105px,
+      275px 75px,
+      278px 75px,
+      426.5px 180px;
+  }
+  to {
+    background-position:
+      0px 6800px,
+      3px 6800px,
+      151.5px 6917.5px,
+      25px 13632px,
+      28px 13632px,
+      176.5px 13758px,
+      50px 5416px,
+      53px 5416px,
+      201.5px 5491px,
+      75px 17175px,
+      78px 17175px,
+      226.5px 17301.5px,
+      100px 5119px,
+      103px 5119px,
+      251.5px 5221px,
+      125px 8428px,
+      128px 8428px,
+      276.5px 8495px,
+      150px 9876px,
+      153px 9876px,
+      301.5px 9965.5px,
+      175px 13391px,
+      178px 13391px,
+      326.5px 13540.5px,
+      200px 14741px,
+      203px 14741px,
+      351.5px 14848.5px,
+      225px 18770px,
+      228px 18770px,
+      376.5px 18910.5px,
+      250px 5082px,
+      253px 5082px,
+      401.5px 5161px,
+      275px 6375px,
+      278px 6375px,
+      426.5px 6480px;
+  }
+}
+
+
 /*===================
   buttons and links
 ===================*/
@@ -144,7 +322,6 @@ button {
   padding: 0.8em 1.4em;
   font-weight: 500;
   font-size: 0.9rem;
-  text-transform: lowercase;
   transition: transform 0.2s ease-in-out;
 }
 
@@ -201,6 +378,127 @@ button {
 
 .btn--icon:active {
   transform: translateY(-5px);
+}
+
+.switch {
+  --transition: 300ms;
+  --transition500: 500ms;
+  --color-dark: #0c0f14;
+  --color-darkGray: #21262e;
+  --color-gray: #52555a;
+  --color-offwhite: #cecece;
+  --shadow-color: var(--color-dark);
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 60px;
+  height: fit-content;
+  background-color: var(--color-dark);
+  border-radius: 30px;
+  padding: 4px;
+  transition: var(--transition500);
+  user-select: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+/* Svg styles */
+.switch .svg {
+  transition: var(--transition);
+  position: absolute;
+  left: 5px;
+}
+.switch .moon {
+  width: 18px;
+  fill: var(--color-gray);
+  opacity: 1;
+}
+
+.switch .sun {
+  transform: translateY(-50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  left: calc(100% - 21.5px);
+  top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scale: 0.8;
+  opacity: 0;
+}
+
+.switch .sun .dot {
+  position: relative;
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: var(--color-dark);
+  background: white;
+  z-index: 1;
+  box-shadow: 11px 0px 0px var(--shadow-color),
+    10.3px 0px 0px var(--shadow-color), -11px 0px 0px var(--shadow-color),
+    -10.3px 0px 0px var(--shadow-color), 0px -11px 0px var(--shadow-color),
+    0px -10.3px 0px var(--shadow-color), 0px 11px 0px var(--shadow-color),
+    0px 10.3px 0px var(--shadow-color), 8px 8px 0px var(--shadow-color),
+    7.3px 7.3px 0px var(--shadow-color), 8px -8px 0px var(--shadow-color),
+    7.3px -7.3px 0px var(--shadow-color), -8px -8px 0px var(--shadow-color),
+    -7.3px -7.3px 0px var(--shadow-color), -8px 8px 0px var(--shadow-color),
+    -7.3px 7.3px 0px var(--shadow-color);
+}
+
+.switch .sun .dot::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid var(--color-dark);
+}
+
+/*checkbox styles */
+.switch .circle {
+  appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  left: 0;
+  background-color: var(--color-darkGray);
+  border: 1px solid var(--color-darkGray);
+  transition: var(--transition500);
+  box-shadow: 1px 1px 20px 3px var(--color-darkGray);
+}
+
+.switch:has(.circle:checked) {
+  background: var(--color-offwhite);
+}
+
+.switch .circle:hover {
+  margin-left: 3px;
+}
+.switch .circle:checked:hover {
+  margin-left: -3px;
+}
+
+.switch .circle:checked {
+  left: calc(100% - 24px);
+  background: white;
+  border-color: white;
+  box-shadow: 1px 1px 30px 12px white;
+}
+
+.switch:has(.circle:checked) > .sun {
+  opacity: 1;
+}
+
+.switch:has(.circle:checked) > .moon {
+  opacity: 0;
 }
 
 /*========
