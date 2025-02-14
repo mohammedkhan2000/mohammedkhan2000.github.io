@@ -385,10 +385,10 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 .switch {
   --transition: 300ms;
   --transition500: 500ms;
-  --color-dark: #0c0f14;
-  --color-darkGray: #21262e;
+  --color-dark: #7b7b99;
+  --color-darkGray: #a4a4cc;
   --color-gray: #52555a;
-  --color-offwhite: #cecece;
+  --color-offwhite: #c1c1c1;
   --shadow-color: var(--color-dark);
   position: relative;
   display: flex;
